@@ -22,30 +22,39 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## 프로젝트 설명
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework를 사용하여 구현 하는 DAPP Backend
 
-## Installation
+eslint와 prettierrc가 적용되어 있어서, vscode의 경우 settings.json에 
+```json
+"[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+```
+를 추가하여 코드 저장 시, 자동으로 formatting 할 수 있게 설정해준다.
+
+## 패키지 종합 설치
 
 ```bash
-$ npm install
+$ npm i
 ```
 
-## Running the app
+## 서버 실행
 
 ```bash
-# development
+# simple execute server
 $ npm run start
 
-# watch mode
+# 수정 사항 즉시 반영
 $ npm run start:dev
 
 # production mode
 $ npm run start:prod
 ```
 
-## Test
+## Server Test
 
 ```bash
 # unit tests
@@ -57,17 +66,3 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
