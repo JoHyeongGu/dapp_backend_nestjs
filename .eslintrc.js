@@ -25,7 +25,11 @@ module.exports = {
       'error',
       {
         endOfLine: 'auto',
-      }
+        semi: true,
+        tabWidth: 4,
+        singleQuote: true,
+        useTabs: false
+      },
     ]
   },
 };
