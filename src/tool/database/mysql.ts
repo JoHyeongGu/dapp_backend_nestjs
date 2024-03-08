@@ -2,7 +2,7 @@ import { Injectable, OnModuleInit } from '@nestjs/common';
 import mysql from 'mysql2/promise';
 
 @Injectable()
-export class ConnectionService implements OnModuleInit {
+export class MysqlService implements OnModuleInit {
     public CP: mysql.Pool;
     constructor() {}
 
