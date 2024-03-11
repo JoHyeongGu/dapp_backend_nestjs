@@ -1,16 +1,9 @@
+import { mysqlConnect } from './tool/database/mysql/typeorm.config';
+import { UserModule } from './user/user.module';
+import { config_root } from './tool/config';
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 
 @Module({
-    imports: [
-        ConfigModule.forRoot({
-            isGlobal: true,
-            envFilePath: '.env',
-        }),
-    ],
-    controllers: [AppController],
-    providers: [AppService],
+    imports: [config_root, mysqlConnect(process.env), UserModule],
 })
 export class AppModule {}
